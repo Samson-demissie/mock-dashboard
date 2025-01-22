@@ -23,7 +23,7 @@ fig_population_bar = px.bar(
     mock_data,
     x="Region",
     y="Population",
-    title="Population by Region (Long Numbers)"
+    title="Population by Region"
 )
 # Force axis to display full integers (no rounding/scientific)
 fig_population_bar.update_layout(
@@ -37,7 +37,7 @@ fig_population_hist = px.histogram(
     mock_data,
     x="Population",
     nbins=5,
-    title="Population Distribution (Histogram) - Long Numbers"
+    title="Population Distribution (Histogram) - "
 )
 fig_population_hist.update_layout(
     xaxis=dict(tickformat='d'),
@@ -104,11 +104,11 @@ fig_malnutrition_scatter.update_layout(
 # Initialize the Dash app
 app = JupyterDash(__name__)
 
-# Define the layout (with even more deliberate design issues)
+
 app.layout = html.Div([
-    # Main header with extremely large, clashing style
+   
     html.H1(
-        "Ethiopia Humanitarian Dashboard (Deliberately Flawed)",
+        "Ethiopia Humanitarian Dashboard",
         style={
             "textAlign": "center",
             "color": "#00FFFF",       # bright cyan
@@ -118,7 +118,7 @@ app.layout = html.Div([
     ),
 
     # Short intro with tiny font that's hard to read
-    html.Div("A chaotic visual overview of various indicators.",
+    html.Div("visual overview of various indicators.",
              style={
                  "textAlign": "left",
                  "fontSize": "9px",
